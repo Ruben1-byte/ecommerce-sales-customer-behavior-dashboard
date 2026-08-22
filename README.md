@@ -144,8 +144,8 @@ Loyal & Potential (562 Pelanggan): Pelanggan aktif yang berpotensi ditingkatkan 
 
 ### 🤖 Machine Learning: Customer Churn Prediction
 Memprediksi potensi pelanggan mengalami Churn (1) jika tidak bertransaksi dalam > 90 hari terakhir.
-Python
-# Algoritma: Random Forest Classifier
+Algoritma: Random Forest Classifier
+
 from sklearn.ensemble import RandomForestClassifier
 
 X = df_ml[["quantity", "unit_price", "total_sales"]]
