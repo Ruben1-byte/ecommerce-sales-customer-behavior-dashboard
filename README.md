@@ -36,7 +36,6 @@ Berdasarkan hasil pemrosesan dan analisis data transaksi, diperoleh indikator ki
 
 ## 📁 Repository Structure
 
-```text
 E-Commerce Sales & Customer Behavior Dashboard/
 ├── dashboard/
 │   └── E-Commerce Sales & Customer Behavior Dashboard.twbx  # Tableau Workbook
@@ -76,6 +75,7 @@ E-Commerce Sales & Customer Behavior Dashboard/
                                 │
                                 ▼
                      [ Random Forest Churn Model ]
+
 
 ### 🧹 Pembersihan & Transmisi Data (Python)
 Proses manipulasi data dilakukan di script/datacleaning.py dan script/load_to_mysql.py:
@@ -181,8 +181,8 @@ pip install pandas sqlalchemy pymysql scikit-learn matplotlib seaborn
 Jalankan Ingest MySQL & Machine Learning:
 
 PowerShell
-# 1. Pastikan Service MySQL/XAMPP aktif
+1. Pastikan Service MySQL/XAMPP aktif
 python script/load_to_mysql.py
 
-# 2. Jalankan Model Prediksi Churn
+2. Jalankan Model Prediksi Churn
 python script/churn_prediction.py
