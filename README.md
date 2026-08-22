@@ -77,12 +77,12 @@ E-Commerce Sales & Customer Behavior Dashboard/
                                 ▼
                      [ Random Forest Churn Model ]
 
-🧹 Pembersihan & Transmisi Data (Python)
+#🧹 Pembersihan & Transmisi Data (Python)
 Proses manipulasi data dilakukan di script/datacleaning.py dan script/load_to_mysql.py:
 Data Cleaning: Menangani missing values, duplikasi, standarisasi tipe data tanggal (DATETIME), serta pembersihan whitespace.
 MySQL Ingestion: Mengonversi DataFrame ke tabel relasional MySQL (ecommerce_db.sales) menggunakan SQLAlchemy & PyMySQL dengan presisi tipe data (SMALLINT UNSIGNED, DECIMAL, VARCHAR).
 
-🗄️ Database Optimization & Analytical SQL
+#🗄️ Database Optimization & Analytical SQL
 Pengindeksan dilakukan di sql/create_tables_and_indexes.sql untuk mempercepat eksekusi query:
 
 SQL
@@ -135,13 +135,13 @@ FROM sales
 GROUP BY payment_method
 ORDER BY total_revenue DESC;
 
-💡 Customer Insights & RFM Segmentation
+#💡 Customer Insights & RFM Segmentation
 Mengelompokkan pelanggan berdasarkan kriteria Recency, Frequency, & Monetary (script/rfm_analysis.py):
 Champions (195 Pelanggan): Segmen paling bernilai dengan rata-rata nilai transaksi mencapai Rp 8,03 Juta per pelanggan.
 At-Risk & Hibernating (743 Pelanggan): Mencakup ~49.5% dari total pelanggan yang sudah lama tidak bertransaksi. Sangat membutuhkan strategi kampanye win-back.
 Loyal & Potential (562 Pelanggan): Pelanggan aktif yang berpotensi ditingkatkan nilai belanjanya melalui upselling / cross-selling.
 
-🤖 Machine Learning: Customer Churn Prediction
+#🤖 Machine Learning: Customer Churn Prediction
 Memprediksi potensi pelanggan mengalami Churn (1) jika tidak bertransaksi dalam > 90 hari terakhir.
 Python
 # Algoritma: Random Forest Classifier
@@ -153,7 +153,7 @@ y = df_ml["is_churn"]
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-📈 Evaluasi Model & Feature Engineering
+#📈 Evaluasi Model & Feature Engineering
 Penanganan Target Leakage: Pengujian awal memasukkan recency_days ke dalam fitur X, menghasilkan skor sempurna buatan (ROC-AUC 1.00). Untuk menghindari data leakage, fitur recency_days diisolasi.
 Hasil Model Baseline:
 Accuracy: 56%
@@ -166,7 +166,7 @@ quantity (18.48%)
 
 Learning Point ML: Murni variabel transaksi tunggal belum cukup kuat memprediksi churn secara independen. Diperlukan penambahan fitur agregasi riwayat belanja (Customer-level Aggregate Features) untuk meningkatkan akurasi pemodelan selanjutnya.
 
-🚀 Cara Menjalankan Proyek Secara Lokal
+#🚀 Cara Menjalankan Proyek Secara Lokal
 Clone Repository:
 
 Bash
