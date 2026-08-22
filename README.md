@@ -166,13 +166,6 @@ quantity (18.48%)
 
 Learning Point ML: Murni variabel transaksi tunggal belum cukup kuat memprediksi churn secara independen. Diperlukan penambahan fitur agregasi riwayat belanja (Customer-level Aggregate Features) untuk meningkatkan akurasi pemodelan selanjutnya.
 
-🖼️ Dashboard Preview & Structure
-1. Sales Overview Dashboard
-Fokus pada tren penjualan bulanan, performa kategori produk, dan distribusi metode pembayaran.
-
-2. Customer Insights Dashboard
-Fokus pada peta sebaran pelanggan dan analisis segmentasi RFM.
-
 🚀 Cara Menjalankan Proyek Secara Lokal
 Clone Repository:
 
