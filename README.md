@@ -85,7 +85,7 @@ MySQL Ingestion: Mengonversi DataFrame ke tabel relasional MySQL (ecommerce_db.s
 
 ### 🗄️ Database Optimization & Analytical SQL
 Pengindeksan dilakukan di sql/create_tables_and_indexes.sql untuk mempercepat eksekusi query:
-
+```text
 SQL
 ALTER TABLE sales ADD PRIMARY KEY (order_id);
 ALTER TABLE sales ADD INDEX idx_order_date (order_date);
@@ -135,7 +135,7 @@ SELECT
 FROM sales
 GROUP BY payment_method
 ORDER BY total_revenue DESC;
-
+```
 ### 💡 Customer Insights & RFM Segmentation
 Mengelompokkan pelanggan berdasarkan kriteria Recency, Frequency, & Monetary (script/rfm_analysis.py):
 Champions (195 Pelanggan): Segmen paling bernilai dengan rata-rata nilai transaksi mencapai Rp 8,03 Juta per pelanggan.
