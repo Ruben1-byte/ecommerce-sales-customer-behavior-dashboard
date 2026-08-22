@@ -112,6 +112,16 @@ SELECT
     ROUND(((total_revenue - LAG(total_revenue) OVER (ORDER BY month_year)) / LAG(total_revenue) OVER (ORDER BY month_year)) * 100, 2) AS mom_growth_percent
 FROM monthly_perf;
 
+3. Performa Metode Pembayaran (Aggregation)
+SELECT 
+    payment_method,
+    COUNT(order_id) AS total_transactions,
+    SUM(total_sales) AS total_revenue,
+    ROUND(AVG(total_sales), 2) AS avg_transaction_value
+FROM sales
+GROUP BY payment_method
+ORDER BY total_revenue DESC;
+
 💡 Customer Insights & RFM Segmentation
 Mengelompokkan pelanggan berdasarkan kriteria Recency, Frequency, & Monetary (script/rfm_analysis.py):
 Champions (195 Pelanggan): Segmen paling bernilai dengan rata-rata nilai transaksi mencapai Rp 8,03 Juta per pelanggan.
