@@ -21,6 +21,19 @@ Berdasarkan hasil pemrosesan dan analisis data transaksi, diperoleh indikator ki
 
 ---
 
+## 🖼️ Preview Dashboard & Hasil Machine Learning
+
+### 1. Sales Overview Dashboard
+![Sales Overview Dashboard](images/Dashboard%201.png)
+
+### 2. Customer Insights Dashboard (RFM)
+![Customer Insights Dashboard](images/Customer%20Insights.png)
+
+### 3. Machine Learning Feature Importance
+![Feature Importance Chart](images/feature_importance.png)
+
+---
+
 ## 📁 Repository Structure
 
 ```text
